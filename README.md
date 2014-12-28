@@ -4,8 +4,6 @@ jQuery.Simple-Event-Calendar
 jQuery.Simple-Event-Calendar make it easier for you to create an calendar. Check out the demo!
 
 
-[Thanks to jqueryscript.net](http://www.jqueryscript.net/time-clock/Creating-A-Pretty-Event-Calendar-with-jQuery.html)
-
 [Check out demo!](http://philipehsing.github.io/simplecalendar/personal.html)
 
 
