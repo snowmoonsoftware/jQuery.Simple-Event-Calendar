@@ -23,7 +23,7 @@ var calendar = {
         /**
          * Get current day and set as '.current-day'
          */
-        $('tbody td:contains("' + d.getDate() + '")').addClass('current-day');
+        $('tbody td[date-day="' + d.getDate() + '"]').addClass('current-day');
 
         /**
          * Add class '.active' on calendar date
