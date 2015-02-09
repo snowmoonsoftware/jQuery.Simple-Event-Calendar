@@ -47,5 +47,6 @@ bower install simpleeventcalendar
 
 ###Todo
 * List days automatically based on month
+* Change month
 * Datepicker
 
