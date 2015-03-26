@@ -46,12 +46,3 @@ bower install simpleeventcalendar
 * Uncheck calender '.day-event' checkbox when removing event from personal list
 * Sort personal list based on date
 * Problem when there was more then one event on same day data-number="1"
-
-<<<<<<< Updated upstream
-###Todo
-* List days automatically based on month
-* Change month
-* Datepicker
-
-=======
->>>>>>> Stashed changes
