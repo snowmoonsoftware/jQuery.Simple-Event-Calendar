@@ -39,14 +39,19 @@ bower install simpleeventcalendar
 ![alt tag](http://oi62.tinypic.com/dmbq86.jpg)
 
 ###Updates
+* List days automatically based on month
+* Change month
 * Personal list with print function
-* Auto add '.event' class to all days that has an event 
+* Auto add '.event' class to all days that has an event
 * Uncheck calender '.day-event' checkbox when removing event from personal list
 * Sort personal list based on date
 * Problem when there was more then one event on same day data-number="1"
 
+<<<<<<< Updated upstream
 ###Todo
 * List days automatically based on month
 * Change month
 * Datepicker
 
+=======
+>>>>>>> Stashed changes

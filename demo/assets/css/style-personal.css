@@ -62,10 +62,6 @@ table {
 
 .calendar tbody td:hover {
     border: 2px solid #c0392b;
-    border-radius: 50%;
-    position: absolute;
-    height: 64px;
-    width: 64px;
 }
 
 .calendar tbody td.active {
@@ -78,8 +74,10 @@ table {
     height: 64px;
     line-height: 64px;
     text-align: center;
+    display: inline-block;
     width: 64px;
-    padding: 2px;
+    padding: 1px;
+    float: left;
 }
 
 .current-day {
