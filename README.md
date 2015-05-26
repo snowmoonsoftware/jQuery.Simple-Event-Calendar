@@ -4,9 +4,6 @@ jQuery.Simple-Event-Calendar
 jQuery.Simple-Event-Calendar make it easier for you to create an calendar. Check out the demo!
 
 
-[Check out demo!](http://philipehsing.github.io/simplecalendar/personal.html)
-
-
 ###Install
 ```html
 bower install simpleeventcalendar
