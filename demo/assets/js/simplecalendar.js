@@ -155,7 +155,10 @@ var calendar = {
       $('.day-event').each(function(i) {
         var eventMonth = $(this).attr('date-month');
         var eventDay = $(this).attr('date-day');
-        $('tbody.event-calendar tr td[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').addClass('event');
+        var eventClass = $(this).attr('event-class');
+        if (eventClass === undefined) eventClass = 'event';
+        else eventClass = 'event ' + eventClass;
+        $('tbody.event-calendar tr td[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').addClass(eventClass);
       });
     };
 
