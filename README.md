@@ -36,6 +36,7 @@ bower install simpleeventcalendar
 ![alt tag](http://oi62.tinypic.com/dmbq86.jpg)
 
 ###Updates
+* Add custom classes to each event
 * List days automatically based on month
 * Change month
 * Personal list with print function
