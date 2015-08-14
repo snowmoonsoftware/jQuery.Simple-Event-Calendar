@@ -105,6 +105,14 @@ table {
     width: 8px;
 }
 
+.event.green-event:after {
+    background: #009E82;
+}
+
+.event.blue-event:after {
+    background: #0078AB;
+}
+
 .event.current-day:after {
     background: #f9f9f9;
 }
