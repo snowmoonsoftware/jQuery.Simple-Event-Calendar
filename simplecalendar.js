@@ -2,27 +2,27 @@ var calendar = {
 
   init: function() {
 
-    var mon = 'Ma';
-    var tue = 'Di';
-    var wed = 'Woe';
-    var thur = 'Do';
-    var fri = 'Vr';
-    var sat = 'Za';
-    var sund = 'Zo';
+    var mon = 'Mon';
+    var tue = 'Tue';
+    var wed = 'Wed';
+    var thur = 'Thur';
+    var fri = 'Fri';
+    var sat = 'Sat';
+    var sund = 'Sun';
 
     /**
      * Get current date
      */
     var d = new Date();
     var strDate = yearNumber + "/" + (d.getMonth() + 1) + "/" + d.getDate();
-	var yearNumber = (new Date).getFullYear(); 
+    var yearNumber = (new Date).getFullYear();
     /**
      * Get current month and set as '.current-month' in title
      */
     var monthNumber = d.getMonth() + 1;
 
     function GetMonthName(monthNumber) {
-      var months = ['January', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'July', 'Augustus', 'September', 'October', 'November', 'December'];
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
       return months[monthNumber - 1];
     }
 
@@ -39,7 +39,7 @@ var calendar = {
       if (monthNumber > 11) {
         $('.month').attr('data-month', '0');
         var monthNumber = $('.month').attr('data-month');
-        yearNumber = yearNumber +1;
+        yearNumber = yearNumber + 1;
         setMonth(parseInt(monthNumber) + 1, mon, tue, wed, thur, fri, sat, sund);
       } else {
         setMonth(parseInt(monthNumber) + 1, mon, tue, wed, thur, fri, sat, sund);
@@ -51,7 +51,7 @@ var calendar = {
       if (monthNumber < 2) {
         $('.month').attr('data-month', '13');
         var monthNumber = $('.month').attr('data-month');
-        yearNumber = yearNumber -1;
+        yearNumber = yearNumber - 1;
         setMonth(parseInt(monthNumber) - 1, mon, tue, wed, thur, fri, sat, sund);
       } else {
         setMonth(parseInt(monthNumber) - 1, mon, tue, wed, thur, fri, sat, sund);
@@ -122,8 +122,8 @@ var calendar = {
       });
       var date = new Date();
       var month = date.getMonth() + 1;
-      var thisyear = new Date().getFullYear(); 
-      setCurrentDay(month,thisyear);
+      var thisyear = new Date().getFullYear();
+      setCurrentDay(month, thisyear);
       setEvent();
       displayEvent();
     }
@@ -131,13 +131,13 @@ var calendar = {
     /**
      * Get current day and set as '.current-day'
      */
-    function setCurrentDay(month,year) {
+    function setCurrentDay(month, year) {
       var viewMonth = $('.month').attr('data-month');
- 	  var eventYear = $('.event-days').attr('date-year');
- 	  if (parseInt(year) === yearNumber) {
-      if (parseInt(month) === parseInt(viewMonth)) {  	
-        $('tbody.event-calendar td[date-day="' + d.getDate() + '"]').addClass('current-day');
-       }
+      var eventYear = $('.event-days').attr('date-year');
+      if (parseInt(year) === yearNumber) {
+        if (parseInt(month) === parseInt(viewMonth)) {
+          $('tbody.event-calendar td[date-day="' + d.getDate() + '"]').addClass('current-day');
+        }
       }
     };
 
@@ -164,9 +164,9 @@ var calendar = {
         var eventClass = $(this).attr('event-class');
         if (eventClass === undefined) eventClass = 'event';
         else eventClass = 'event ' + eventClass;
-        
+
         if (parseInt(eventYear) === yearNumber) {
-        $('tbody.event-calendar tr td[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').addClass(eventClass);
+          $('tbody.event-calendar tr td[date-month="' + eventMonth + '"][date-day="' + eventDay + '"]').addClass(eventClass);
         }
       });
     };

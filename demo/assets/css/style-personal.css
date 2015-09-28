@@ -71,11 +71,11 @@ table {
 .calendar td {
     border: 2px solid transparent;
     border-radius: 50%;
-    height: 64px;
+    height: 72px;
     line-height: 64px;
     text-align: center;
     display: inline-block;
-    width: 64px;
+    width: 79px;
     padding: 1px;
     float: left;
 }
