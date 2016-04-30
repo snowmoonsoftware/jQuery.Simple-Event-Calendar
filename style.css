@@ -2,30 +2,24 @@
     font-family: 'FontAwesome', sans-serif;
 }
 
-body {
-    background: #f9f9f9;
-    color: #0e171c;
-    font: 300 100%/1.5em 'Lato', sans-serif;
-    margin: 0;
-}
 
-a {
+.calendar a {
     text-decoration: none;
 }
 
-h2 {
+.calendar h2 {
     font-size: 22px;
     line-height: 20px;
     margin: 4px 0;
 }
 
-h3 {
+.calendar h3 {
     font-size: 24px;
     line-height: 24px;
     margin: 5px 0;
 }
 
-table {
+.calendar table {
     border-spacing: 0;
     width: 100%;
 }
@@ -45,6 +39,8 @@ table {
 
 .calendar header {
     position: relative;
+    height: auto;
+    background: none;
 }
 
 .calendar h2 {
@@ -62,6 +58,8 @@ table {
 
 .calendar tbody td:hover {
     border: 2px solid #c0392b;
+    border-radius: 50%;
+    position: relative;
 }
 
 .calendar tbody td.active {
@@ -71,11 +69,13 @@ table {
 .calendar td {
     border: 2px solid transparent;
     border-radius: 50%;
-    display: inline-block;
-    height: 64px;
+    height: 72px;
     line-height: 64px;
     text-align: center;
-    width: 64px;
+    display: inline-block;
+    width: 70px;  /*     was 79px -- JDP*/
+    padding: 1px;
+    float: left;
 }
 
 .current-day {
@@ -101,12 +101,20 @@ table {
     width: 8px;
 }
 
+.event.green-event:after {
+    background: #009E82;
+}
+
+.event.blue-event:after {
+    background: #0078AB;
+}
+
 .event.current-day:after {
     background: #f9f9f9;
 }
 
-.btn-prev,
-.btn-next {
+.calendar .btn-prev,
+.calendar .btn-next {
 	border: 2px solid #cbd1d2;
 	border-radius: 50%;
 	color: #cbd1d2;
@@ -119,25 +127,25 @@ table {
 	width: 32px;
 }
 
-.btn-prev:hover,
-.btn-next:hover {
+.calendar .btn-prev:hover,
+.calendar .btn-next:hover {
     background: #cbd1d2;
     color: #f9f9f9;
 }
 
-.btn-prev {
+.calendar .btn-prev {
     left: 30px;
 }
 
-.btn-next {
+.calendar .btn-next {
     right: 35px;
 }
 
-.list {
+.calendar .list {
     margin-top: 20px;
 }
 
-.close {
+.calendar .close {
     color: #A4AAAB;
     margin-top: -15px;
     margin-right: 10px;
@@ -145,8 +153,8 @@ table {
 }
 
 .day-event {
-    background-color: #F2F2F2 ;
-    width: 100%;
+/*    background-color: #F2F2F2 ; removed JDP */
+      width: 100%;
     padding-top: 20px;
     padding-bottom: 0px;
     margin-bottom: 50px;
@@ -182,12 +190,12 @@ table {
     box-shadow: inset 0 -2px #b53224;
 }
 
-.check-btn {
+.calendar .check-btn {
     width: 100%;
 }
-input[type=checkbox] {display:none;}
+.calendar input[type=checkbox] {display:none;}
 
-span {
+.calendar span {
     background-color:#373740;
     -webkit-border-radius:4px;
     -moz-border-radius:4px;
@@ -212,11 +220,11 @@ span {
     transition:background-color 150ms ease-in;
 }
 
-span:hover {
+.calendar span:hover {
     background-color:#c0392b;
 }
 
-input[type=checkbox]:checked + span {
+.calendar input[type=checkbox]:checked + span {
     background-color:#9C2E23;
     text-decoration:none;
     -webkit-border-radius:4px;
@@ -226,7 +234,7 @@ input[type=checkbox]:checked + span {
     background-size:15px 13px;
 }
 
-input[type=checkbox]:checked:hover + span {
+.calendar input[type=checkbox]:checked:hover + span {
     background-color:#9C2E23;
     color:rgba(255,255,255,0.5);
     text-decoration:none;
@@ -237,7 +245,7 @@ input[type=checkbox]:checked:hover + span {
     background-size:15px 15px;
 }
 
-.print-btn {
+.calendar .print-btn {
     padding: 1px 14px 5px 14px;
 }
 
